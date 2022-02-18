@@ -14,24 +14,24 @@ def fuellen():
 
 
 def abfrage():
-    hersteller = input("Hersteller ?")
-    modell = input("Modell?")
-    leistung = input("Leistung?")
-    sitzanzahl = input("Anzahl Sitze?")
-    hoechstgeschwindigkeit = input("Höchstgeschwindigkeit")
+    hersteller = input("Hersteller? ")
+    modell = input("Modell? ")
+    leistung = input("Leistung? ")
+    sitzanzahl = input("Anzahl Sitze? ")
+    hoechstgeschwindigkeit = input("Höchstgeschwindigkeit? ")
     return (hersteller, modell, leistung, sitzanzahl, hoechstgeschwindigkeit)
 
 
-abfrage = input("Befüllung automatisch oder manuell (a/m) ")
+befuellung_art = input("Befüllung automatisch oder manuell (a/m) ")
 
-if abfrage == "a":
+if befuellung_art == "a":
     anzahl = int(input("Wie viele Fahrzeuge ?"))
     for i in range(anzahl):
         fahrzeugliste.append(fuellen())
 
 else:
     while True:
-        fahrzeugliste.append(abfrage())
+        fahrzeugliste.append(befuellung_art())
 
         weitere = input("Weitere Fahrzeuge (J/N)?")
         if weitere != "J":
